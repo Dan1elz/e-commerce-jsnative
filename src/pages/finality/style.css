@@ -1,0 +1,126 @@
+:root {
+    --cor-Titulo: #1b2021;
+    --cor-preço-antigo: #E58C80;
+    --cor-promoção: #43272f;
+    --cor-fundo: #f5f5f5;
+    --cor-card: #FFFFFF;
+}
+
+/* Reset de estilos para o elemento <a> */
+a {
+    text-decoration: none;
+}
+
+.fundo {
+    min-height: calc(100vh - 5rem);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--cor-fundo);
+    padding-top: 5rem;
+}
+
+.gridArea {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    align-content: space-between;
+    justify-content: space-around;
+    max-width: 700px; /* Alterado de width para max-width para ser responsivo */
+    width: 100%; /* Para ser responsivo */
+    height: 400px;
+    border: 1px solid rgba(0, 0, 0, 0.09);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 15px;
+    background-color: var(--cor-card);
+   
+}
+
+.pagamento, .contato2, .endereco3, .opcoesEntrega, .seuPedido {
+    width: 300px; /* Para ocupar a largura total da coluna */
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+/* Ajuste no estilo da div.pagamento */
+.contato2 {
+    grid-area: 2 / 1 / span 1 / span 1;
+    text-align: start;
+    height: 100px;
+    position: relative;
+}
+.contato2 .gridTitle {   color: var(--cor-Titulo);}
+.contato2 i {   color: var(--cor-Titulo);}
+.contato2 input {
+    position: absolute;
+    bottom: 15px;
+    padding: 10px ;
+    width: calc(100% - 20px);
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+.titleGrid{
+    grid-area: 1 / 1 / span 1/ span 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--cor-Titulo);
+    border-bottom: 2px solid var(--cor-promoção);
+}
+.contato2 input:focus {
+    border-color: #4CAF50; /* Cor verde (pode ser ajustada) */
+    outline: none;
+}
+.endereco3 {
+    grid-area: 3 / 1 / span 1 / span 1;
+}
+.opcoesEntrega {
+    grid-area: 4 / 1 / span 1 / span 1;
+}
+.pagamento {
+    grid-area: 5 / 1 / span 1 / span 1;
+    border-bottom: none;
+}
+.seuPedido {
+    grid-area: 2 / 2 / span 2/ span 1;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 300px;
+    height: auto;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--cor-preço-antigo);
+}
+.seuPedido .just:first-child p {
+    font-weight: 700;
+    color: var(--cor-Titulo);
+}
+.seuPedido .just:first-child p:last-child {
+    text-decoration: underline;
+}
+.seuPedido .just:first-child {  margin-bottom: 10px;}
+.seuPedido .just:last-child {   margin-top: 10px;}
+.seuPedido .just:last-child p { 
+    font-weight: 700;
+    color: var(--cor-Titulo);
+    font-size: 18px;
+}
+.just {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+.gridTitle {
+    font-size: 16px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.5);
+}

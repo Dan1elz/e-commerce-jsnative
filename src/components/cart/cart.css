@@ -1,0 +1,218 @@
+:root{
+    --cor-Titulo: #1b2021;
+    --cor-preço-antigo: #E58C80;
+    --cor-promoção: #43272f;
+    --cor-fundo: #f5f5f5;
+    --cor-card: #FFFFFF;
+    --cor--compras: rgba(255, 255, 255, 0.5);
+    --cor-icon: #535353;
+}
+.fundo{
+    display: flex;
+    justify-content: center;
+    background-color: var(--cor-fundo);
+    min-height: 100vh;
+    height: 100%;
+}
+.azul {
+    display: grid;
+    text-align: center;
+    width: 100%;
+    grid-template-columns: repeat(2, auto);
+    justify-items: center;
+}
+.carrinhoGrid {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 100%;
+    gap: 2px;
+    
+}
+.cardGrid {
+    padding-top: 5rem;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(1, auto);
+    width: 100%;
+    justify-items: center;
+    margin-bottom: 2rem;
+}
+.cardCarrinho {
+    position: relative;
+    display: flex;
+    background-color: var(--cor-card);
+    width: 100%;
+    max-width: 40rem;
+    height: 11rem;
+    box-shadow: 0 0 20px rgb(0, 0, 0,0.15);
+    border-radius: 5px;
+    text-align: start;
+}
+.grid1 {
+    display: flex;
+    height: 120px;
+    position: relative;
+}
+.carrinhoImg {
+    width: 120px;
+    height: 120px;
+    border-radius: 5px;
+    filter: brightness(95%);
+    margin: 5px;
+    transition: all 200ms;
+}
+.carrinhoTitulo {
+    margin-top: 5px;
+    color: var(--cor-Titulo);
+    font-size: 1.1rem;
+    line-height: 1.1rem;
+    width: 100%;
+    max-width: 20rem;
+}
+.carrinhoItens {
+    margin-top: 15px;
+    bottom: 20px;
+    line-height: 1.1rem;
+}
+.opcao, .opcao2 {
+    font-weight: 700;
+    margin-right: 7px;
+    font-size: 0.95rem;
+}
+.preco {    font-size: 1rem;}
+.closeIcon {
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--cor-Titulo);
+    transition: all 200ms;
+}.closeIcon:hover { color: var(--cor-icon)}
+
+.gridReparticao {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 1px;
+}
+.gridReparticao > div {
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 100%;
+   width: calc(100% - 10px);
+    border-radius: 50px;
+}
+.gridQuantidades {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.gridQuantidades > div {
+    align-items: center;
+    display: flex;
+}
+.gridQuantidades > div > p {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: rgba(0, 0, 0, 0.8);
+}
+.gridQuantidades > div > form > button {
+    margin: 0 5px 0 5px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.8);
+    border: none;
+    background-color: transparent;
+    transition: all 200ms;
+}
+.gridQuantidades > div > input {
+    width: 3rem;
+    text-align: center;
+    align-items: center;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    height: 1.2rem;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    outline: none;
+}
+.gridQuantidades > p {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+[data-position="1"] {   grid-area: 1 / 1 / span 1 / span 3;}
+[data-position="2"] {   grid-area: 2 / 1 / span 1 / span 3;}
+[data-position="3"] {   grid-area: 3 / 1 / span 1 / span 3; align-self: start;}
+
+.cardCompras {
+    display: grid;
+    width: calc(100%);
+    max-width: 40rem;
+    /* height: 100px; */
+    grid-template-columns: repeat(1, auto);
+    justify-items: center;
+    margin-top: 5.5rem;
+    border-radius: 5px;
+    background-color: var(--cor--compras);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.amarelo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+.comprasSubtotal, .comprasProduto {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    height: 4rem;
+    width: calc(100% - 4rem);
+    font-weight: 700;
+    font-size: 18px;
+}
+.subtotalValor {    color: rgba(0, 0, 0, 0.7);}
+.produtoNome {
+    width: 13rem;
+    color: rgba(0, 0, 0, 0.7);
+    text-align: start;
+}
+.produtoValor2 {
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 400;
+}
+.comprasBtn > button {
+    margin: 1rem 0 1rem 0;
+    width: 100%;
+    height: 2.3rem;
+    border-radius: 50px;
+    border: none;
+    color: var(--cor-fundo);
+    background: var(--cor-preço-antigo);
+    font-weight: bold;
+    font-size: 18px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    transition: 200ms;
+}
+.comprasBtn > button:hover {    filter: brightness(110%);
+}
+[data-formCompra] {
+    text-align: center;
+    width: calc(100% - 4rem);
+}
+@media (min-width: 100px) {
+    .azul { grid-template-columns: repeat(1,auto);}
+    .cardCompras {
+        width: 100%;
+        max-width: 40rem;
+    }
+}
+@media (min-width: 965px){
+    .azul { grid-template-columns: repeat(2,auto);}
+    .cardCompras {
+        width: 100%;
+        max-width: 25rem;
+    }
+}

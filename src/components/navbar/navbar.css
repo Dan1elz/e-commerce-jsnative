@@ -1,0 +1,105 @@
+:root{
+    --cor-titulo: #f5f5f5;
+    --cor-navbar-fundo: #E58C80;
+    --cor-btn-hover: rgba(192, 121, 112, 0.726);
+}
+header {
+    width: 100%;
+    height: 4rem;
+    background-color: var(--cor-navbar-fundo);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+}
+.logo {
+    margin-left: 15px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.logo p {
+    font-family: 'Mukta';
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: var(--cor-titulo);
+}
+.itens {
+    display: inline-flex;
+    align-items: center;
+}
+.menu { margin-left: 2vw;}
+.pesquisarBtn {
+    color: var(--cor-titulo);
+    background-color: transparent;
+    border: none;
+    font-size: 1.75rem;
+    padding: 2px 10px;
+    border-radius: 100px;
+}
+.pesquisarInput {
+    padding-left: 15px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    width: 0;
+    height: 2.3rem;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    visibility: hidden;
+    transition: all 200ms linear;
+}
+.menuLinks {    margin-right: 0.5vw;}
+.menuProdutos {
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: var(--cor-titulo);
+    padding: 10px 15px;
+    border-radius: 50px;
+    transition: all 200ms;
+}
+.menuProdutos:hover {   background: var(--cor-btn-hover);}
+.menuTitulos {
+    font-size: 16px;
+    margin-left: 7px;
+}
+.menuOpções {
+    text-decoration: none;
+    font-size: 18px;
+    color: var(--cor-titulo);
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 200ms;
+}
+.menuOpções:hover { background: var(--cor-btn-hover);}
+/* Menu */
+@media (min-width: 100px) {
+    .menuLinks ul li {  display: none;}
+    .menuLinks ul li:last-child {   display: inline-block;}
+    .menuLinks:hover ul li{ display: inline-block;}
+    .menuTitulos {display: none;}
+}
+@media (min-width: 625px) {
+    .menuOpções{    display: none;}
+    .menuLinks ul li {  display: inline;}
+    .menuTitulos {  display: none;}
+}
+@media (min-width: 1050px) {
+    .menuOpções{    display: none;}
+    .menuLinks ul li {    display: inline;}
+    .menuTitulos{ display: inline;}
+}
+/* Pesquisa */
+@media (min-width: 1040px) {
+    .pesquisar:hover > .pesquisarInput { visibility: visible; width: 30vw;}
+}
+@media (max-width: 1040px) {
+    .pesquisar:hover > .pesquisarInput { visibility: visible; width: 40vw;}
+}
+@media (max-width: 650px) {
+    .pesquisar:hover > .pesquisarInput { visibility: visible; width: 30vw;}
+}
+@media (max-width: 625px) {
+    .pesquisar:hover > .PesquisarInput { visibility: visible; width: 40vw;}
+}

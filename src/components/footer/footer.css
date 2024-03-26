@@ -1,0 +1,45 @@
+.article_contato{
+    width: 100%;
+    height: 250px;
+}
+.article_contato{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contato{
+    min-width: 400px;
+    width: 400px;
+    display: block;
+    text-align: center;
+    /* background-color: #E58C80; */
+
+}
+.contato_title{
+    font-size: 20px;
+    padding: 10px 0;
+    border-bottom: #E58C80 3px solid;
+    margin-bottom: 30px;
+}
+.contato_metodos{
+    display: flex;
+    justify-content: space-between;
+    /* width: 35vw; */
+}
+.metodo {
+    text-align: center;
+}
+.metodo i{
+    font-size: 35px;
+}
+.metodo p{
+    font-size: 18px;
+}
+@media(min-width: 100px)
+{
+
+}
+@media(min-width: 600px)
+{
+    
+}

@@ -1,0 +1,124 @@
+:root {
+    --cor-Titulo: #1b2021;
+    --cor-preço-antigo: #E58C80;
+    --cor-promoção: #43272f;
+    --cor-fundo: #f5f5f5;
+    --cor-card: #FFFFFF;
+}
+a { text-decoration: none;}
+.fundo {
+    padding-top: 5rem;
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--cor-fundo);
+}
+.fundo2{
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--cor-fundo);
+}
+.cardGrid, .cardGrid2 {
+    display: grid;
+    grid-area: 15px;
+    gap: 15px;
+    margin-bottom: 2rem;
+}
+.card {
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+    height: 445px;
+    background-color: var(--cor-card);
+    border-radius: 5px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+}
+.cardImg {
+    width: 300px;
+    height: 300px;
+    filter: brightness(80%);
+    border-radius: 5px;
+    transition: all 200ms;
+}.card:hover .cardImg{   filter: brightness(95%);}
+
+.iconFav {
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    right: 10px;
+    text-decoration: none;
+    color: var(--cor-card);
+    padding: 7px 10px;
+    border-radius: 50px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.15);
+    font-size: 17px;
+    transition: all 200ms;
+}.card:hover .iconFav {  visibility: visible;}
+
+.cardTitulo {
+    color: var(--cor-Titulo);
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+}
+.cardBody { margin-left: 10px;}
+.Carditens {
+    position: relative;
+    margin-top: 5px;
+    width: 100%;
+}
+.cardPreçoAntigo {
+    position: absolute;
+    text-decoration:line-through;
+    color: var(--cor-preço-antigo);
+    font-size: 1rem;
+}
+.cardPreço {
+    position: absolute;
+    margin-top: 15px;
+    font-size: 1.55rem;
+    color: var(--cor-Titulo);
+    font-weight: 600;
+}
+.promoção {
+    margin-left: 10px;
+    position: absolute;
+    bottom: 15px;
+    font-size: 1rem;
+    color: var(--cor-promoção);
+}
+.iconCart {
+    position: absolute;
+    color: var(--cor-Titulo);
+    bottom: 55px;
+    right: 15px;
+    font-size: 1.5rem;
+}
+
+/* Responsividade Card */
+@media(min-width: 100px) {
+    .cardGrid, .cardGrid2 { grid-template-columns: repeat(1, auto); }
+    .cardGrid2 {    padding-top: 1rem;}
+    .iconFav {  visibility: visible;}
+}
+@media(min-width: 550px) {
+}
+@media(min-width: 700px) {
+    .cardGrid { grid-template-columns: repeat(2, auto);}
+    .iconFav {  visibility: hidden;}
+}
+@media(min-width: 855px) {
+    .cardGrid2{ grid-template-columns: repeat(2, auto);}
+}
+@media(min-width: 1000px) {
+    .cardGrid { grid-template-columns: repeat(3, auto);}
+}
+@media(min-width: 1200px) {
+    .cardGrid2{ grid-template-columns: repeat(3, auto);}
+}
+
